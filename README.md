@@ -14,6 +14,9 @@ Able to view and download and try the page out your self. Just open and click th
 Then you should be able to open it to our html page.
 Work in progress....
 
+parking.css: The format to make the page come together. Must download the .html file to bring the page together.
+Work in Progress....
+
 
 parkinglive_U_C_3.html: Is the Html source code for our Parking live Page. Able to view and
 download it yourself to try our page out. Just open and click the download button. 
