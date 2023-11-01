@@ -29,11 +29,15 @@ body {
                 color: #fff;
                 text-decoration: none;
                 font-size: 18px;
-                transition: color 0.3s ease;
+                border: 2px solid #fff;
+                border-radius: 50%; /* Creates a circle around the button */
+                padding: 10px 20px;
+                transition: background-color 0.3s ease;
             }
 
                 #top-bar ul li a:hover {
-                    color: #1abc9c;
+                    background-color: #1abc9c;
+                    border-color: #1abc9c;
                 }
 
 .content-container {
