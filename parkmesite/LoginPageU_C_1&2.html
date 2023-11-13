@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration and Login Page </title>
+    <link rel="stylesheet" href="LoginPageU_C_1&2format.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2>Registration</h2>
+      <form id="registrationForm">
+        <div class="input-box">
+          <input type="text" placeholder="Enter your name" required>
+        </div>
+        <div class="input-box">
+          <input type="text" placeholder="Enter your email" required>
+        </div>
+        <div class="input-box">
+          <input type="text" placeholder="Enter your Student ID" required>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Create password" required>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Confirm password" required>
+        </div>
+        <div class="policy">
+          <input type="checkbox">
+          <h3>I accept all terms & conditions</h3>
+        </div>
+        <div class="input-box button">
+          <input type="Submit" value="Register Now">
+        </div>
+        <div class="text">
+          <h3>Already have an account? <a href="#" id="loginLink">Login now</a></h3>
+        </div>
+      </form>
+    </div>
+
+    <div class="login-wrapper" style="display: none;">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <div class="input-box">
+          <input type="text" placeholder="Enter your email" required>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Enter your password" required>
+        </div>
+        <div class="input-box button">
+          <input type="Submit" value="Login">
+        </div>
+        <div class="text">
+          <h3>Don't have an account? <a href="#" id="registerLink">Register now</a></h3>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      const registrationForm = document.getElementById('registrationForm');
+      const loginForm = document.getElementById('loginForm');
+      const loginWrapper = document.querySelector('.login-wrapper');
+      const registrationWrapper = document.querySelector('.wrapper');
+      const loginLink = document.getElementById('loginLink');
+      const registerLink = document.getElementById('registerLink');
+
+      loginLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        registrationWrapper.style.display = 'none';
+        loginWrapper.style.display = 'block';
+      });
+
+      registerLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        loginWrapper.style.display = 'none';
+        registrationWrapper.style.display = 'block';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #3498db;
+    color: #fff;
+}
+
+#top-bar {
+    width: 100%;
+    background-color: #2980b9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+#top-bar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#top-bar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#top-bar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border: 2px solid #fff;
+    border-radius: 50%; /* Creates a circle around the button */
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+#top-bar ul li a:hover {
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+}
+
+.content-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 20px;
+}
+
+#map-container {
+    width: 100%;
+    height: 600px; /* Adjust the height as needed */
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.header {
+    font-family: 'Lobster', cursive;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.parking-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.parking-deck {
+    width: 30%;
+    padding: 20px;
+    margin: 20px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.parking-deck h2 {
+    font-size: 24px;
+}
+
+.parking-deck p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.calendar {
+    text-align: left;
+}
+
+.calendar p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+button.reserve-button {
+    background-color: #1abc9c;
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.reserve-button:hover {
+    background-color: #148f77;
+}
+/* Style for available slots */
+.available {
+    background-color: green;
+    color: white; /* Set text color to white for better visibility */
+}
+
+/* Style for reserved/unavailable slots */
+.reserved {
+    background-color: red;
+    color: white; /* Set text color to white for better visibility */
+}
+
+/* Add this to style your buttons generally */
+.calendar button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+/*Add these styles */
+button.available {
+    background-color: green;
+    color: white;
+}
+
+button.unavailable {
+    background-color: red;
+    color: white;
+}
+
+button.reserved {
+    background-color: red;
+    color: white;
+}

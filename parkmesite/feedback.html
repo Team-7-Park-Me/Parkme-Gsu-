@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>ParkMe - Feedback</title>
+    <link rel="stylesheet" type="text/css" href="parking.css">
+    <style>
+        /* Your existing styles for feedback form */
+    </style>
+</head>
+
+<body>
+    <div id="top-bar">
+        <ul>
+            <li><a class="active" href="LoginPageU_C_1&2.html">Login</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="parkinglive_U_C_3.html">Parking</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="loginadmin.html">Admin page</a></li>
+        </ul>
+    </div>
+    <div class="content-container">
+        <div class="logo-container">
+            <!-- Your logo content goes here -->
+        </div>
+        <div class="header">Feedback</div>
+        <div class="feedback-section">
+            <form id="feedback-form" onsubmit="submitFeedback(event)">
+                <div class="header">Rate us out of 10!</div>
+                <input type="number" id="rating" name="rating" min="1" max="10" required>
+
+                <div class="header">Rate us by stars!</div>
+                <select id="stars" name="stars" required>
+                    <option value="1">1 star</option>
+                    <option value="2">2 stars</option>
+                    <option value="3">3 stars</option>
+                    <option value="4">4 stars</option>
+                    <option value="5">5 stars</option>
+                </select>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script>
+        function submitFeedback(event) {
+            event.preventDefault();
+            const rating = document.getElementById('rating').value;
+            const stars = document.getElementById('stars').value;
+            const description = document.getElementById('description').value;
+
+            // Simulate sending feedback to the admin page (replace with your actual backend endpoint)
+            const feedbackAPI = 'https://example.com/submit-feedback';
+
+            fetch(feedbackAPI, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ rating, stars, description }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert('Feedback submitted successfully!');
+                    // You might want to add additional logic or UI updates here
+                    // Redirect back to admin.html after submitting feedback
+                    window.location.href = 'admin.html';
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error submitting feedback. Please try again.');
+                });
+        }
+    </script>
+</body>
+
+</html>
